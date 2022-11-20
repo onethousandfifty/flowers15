@@ -194,11 +194,9 @@
   $win.on('scroll', function () {
     var p = $win.scrollTop() / max
 
-    if (p === 0) {
-      if (!logoIsShown) {
-        $logoSVG.show()
-        logoIsShown = true
-      }
+    if (p === 0 && !logoIsShown) {
+      $logoSVG.show()
+      logoIsShown = true
     } else if (logoIsShown) {
       $logoSVG.hide()
       logoIsShown = false

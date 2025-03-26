@@ -13,14 +13,33 @@ body {
     height: 2000px;
 }
 
-#Layer_1 {
+.logo {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.logo img {
+    max-width: 300px;
+    height: auto;
+}
+
+.svg-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Layer_1 {
+    width: 8%;
+    margin: 0 auto;
 }
 
 #main_logo {
@@ -97,9 +116,6 @@ li a.svg object {
 
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) {
-    #Layer_1 {
-        width: 30%;
-    }
     li {
     	padding: 15px 17px;
     }
@@ -107,9 +123,6 @@ li a.svg object {
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
-    #Layer_1 {
-        width: 30%;
-    }
     li {
     	padding: 15px 19px;
     }
@@ -117,9 +130,6 @@ li a.svg object {
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-    #Layer_1 {
-        width: 10%;
-    }
     li {
     	padding: 15px 25px;
     }
@@ -127,9 +137,6 @@ li a.svg object {
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-    #Layer_1 {
-        width: 10%;
-    }
     li {
     	padding: 15px 35px;
     }
@@ -137,10 +144,69 @@ li a.svg object {
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
-    #Layer_1 {
-        width: 10%;
-    }
     li {
     	padding: 15px 35px;
     }
+}
+
+/* Posts Section Styles */
+.posts-section {
+    position: fixed;
+    top: 58%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.posts-section h2 {
+    display: none;
+}
+
+.post {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.post-content {
+    font-family: Cabin, sans-serif;
+    font-size: 10px;
+    line-height: 1.5;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.post-date {
+    display: none;
+}
+
+/* Remove button styles */
+.show-posts-btn,
+.close-posts {
+    display: none;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    .logo img {
+        max-width: 200px;
+    }
+
+    #Layer_1 {
+        width: 18%;
+    }
+    
+    .post-content {
+        font-size: 8px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    /* Remove the width setting here */
 }
